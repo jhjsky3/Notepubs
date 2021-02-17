@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+
+/* ---<dash board / count-board>---------------------------------------------------------- */
+
+.count-board{    
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100px;
+}
+
+.count-board dl{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.count-board dl dt,
+.count-board dl dd{
+    --width:120px;
+    border-right: 1p solid gray;
+    text-align: center;
+}
+
+.count-board dl dd{
+    font-size: 22px;
+    font-family: "Jua",AppleSDGothicNeo,"嶺뚮씭理먨뜝占� 占썩뫁伊볣�억옙",dotum,sans-serif;
+    color: #000;
+    margin-top: 10px;
+    width:80px;
+    flex-grow:1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+

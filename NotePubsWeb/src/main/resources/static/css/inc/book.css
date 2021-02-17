@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+
+/* ---<books-writing>---------------------------------------------------------- */
+
+.book-content .cliper{
+	overflow: hidden;
+}
+
+.book-content .book-list{
+   
+    background: #fff;
+    padding:30px;
+    display: flex;
+    
+    flex-wrap: nowrap;
+    overflow: visible;
+    
+    
+    /* 나중에 수정해야 할 내용 */
+    width:20000px;   
+    
+}
+
+
+.book-content .book-list .book{    
+    position: relative;
+    flex-shrink: 0;
+    padding:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 2px dotted #e9e9e9;
+    
+    transition:opacity .5s;
+	transform-origin:left top;	
+	opacity:1;   
+}
+
+.book-content .book-list .book.new-bf{
+	opacity:0;
+	overflow: hidden;
+}
+
+.book-content .book-list .book:hover,
+.book-content .book-list .book.current
+{
+	background: #f1f1e0;
+}
+
+.book-content .book-list .book:first-child{	
+	border-left:none;
+}
+
+.book-content .book-list .book>h1{    
+    font-family: 'Jua', '怨좊뵓', cursive;
+    font-size: 1.3em;
+}
+
+.book-content .book-list .book>div,
+.book-content .book-list .book>form{
+	display: flex;
+	margin-top: 10px;
+}
+
+
+.book-content .book-list .book .img{
+	display: inline-block;
+}
+.book-content .book-list .book .img img{  
+   
+   width: 100px;
+   box-shadow: 1px 1px 3px #797979;
+    /* grid-row : 1/5;
+    grid-column: 1;
+    display: inline-block;
+    width: 120px;
+    --height: 200px;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px #797979; */    
+
+}
+
+.book-content .book-list .book .detail{
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
+}
+
+.book-content .book-list .book .info{
+	flex-grow:1;
+	display: grid;
+	grid-template-columns: 50px auto;
+	grid-template-rows: repeat(6, 1fr);
+	grid-column-gap: 10px;
+	/* justify-content:flex-end;
+	min-width: 150px;
+	padding-left: 10px;
+	line-height: 2em; */
+}
+
+.book-content .book-list .book .info dt{
+	place-self:center right;
+	
+}
+
+.book-content .book-list .book .info dd{
+	place-self:center left;
+}
+
+.book-content .book-list .book .info .img img{
+    width: inherit;
+    height: inherit;
+    object-fit:cover;
+    
+}
+
+.book-content .book-list .book .info .writerId{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.book-content .book-list .book .info .aaa{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.book-content .book-list .book .info .button{
+    grid-column: 2;
+    grid-row: 3;
+    
+}

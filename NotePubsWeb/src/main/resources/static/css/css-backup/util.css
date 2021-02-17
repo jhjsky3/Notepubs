@@ -1,0 +1,494 @@
+@charset "UTF-8";
+
+/* --- my style cascade ------------------------------- */
+.hidden{
+	display: none;
+}
+
+.clear-fix:after{
+	content: '';
+	display: block;
+	overflow: hidden;
+	clear: both;
+	height: 0px;
+}
+
+.color-notice{
+	color:#ff6a00;
+}
+
+.text-strong{
+	font-weight: bold;
+}
+
+.text-center,
+.inline-center{
+	text-align:center;
+}
+
+.text-right,
+.inline-right{
+	text-align:right;
+}
+
+/* ---------------- margin ----------------------------------------------- */
+.margin-top{
+	margin-top:10px;
+}
+
+.margin-top-2{
+	margin-top:5px;
+}
+
+.margin-left{
+	margin-left:10px;
+}
+
+.margin-right{
+	margin-right:10px;
+}
+
+.margin-bottom{
+	margin-bottom:10px;
+}
+
+/* ---------------- text ----------------------------------------------- */
+.text-align-center{
+	text-align: center;
+}
+
+/* -------------------------------------------------------- */
+.icon{
+	width:24px;
+	height: 24px;
+	text-decoration:none;	
+	display: inline-block;
+	text-indent: -999px;
+	overflow:hidden;
+    border:none;
+    vertical-align: middle;
+    /* border-radius: 12px; */
+}
+
+.camera-icon {	
+	background:url("../images/icon-set.png") no-repeat -312px -24px;
+}
+
+.lock-icon {	
+	background:url("../images/icon-set.png") no-repeat -96px 0px;
+}
+
+.unlock-icon {	
+	background:url("../images/icon-set.png") no-repeat -72px 0px;
+}
+
+.hamburger-icon {	
+	background:url("../images/icon-set.png") no-repeat 0px 0px;
+}
+
+.none-icon-xl{
+	width:inherit;
+	height: inherit;
+	text-decoration:none;
+	display: initial;
+	text-indent: 0px;
+    background:none;
+}
+
+
+
+
+/* --- button style ----------------------------------------- */
+
+.btn{
+	text-decoration:none;
+	color:#000;
+	display: inline-block;
+    padding: 6px 20px;
+    border: 1px solid #dbdfe5;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #FFF;
+    text-align: center;
+    
+    cursor: pointer;
+}
+
+.btn.btn-cancel{		
+	background: #595959;
+	color: #fff;
+	text-indent: 0px;
+	cursor: pointer;
+}
+
+.btn.btn-label{
+	font-size: 12px;
+	border-radius: 5px;
+	height: 10px;
+	line-height: 10px;
+	padding: 8px 20px;	
+	cursor: pointer;
+}
+
+.btn.btn-default{
+	color: #fff;
+    background-color: #759d2a;
+    border-color: #608618;
+    cursor: pointer;
+}
+
+.btn.btn-note{
+	color: #fff;
+    background-color: #8dc21f;
+    border-radius: 0.3em;
+}
+
+.btn.btn-book{
+	color: #fff;
+    background-color: #ffc600;
+    border-radius: 0.3em;
+}
+
+.btn.btn-published{
+	color: #fff;
+    background-color: #498bc7;
+    border-radius: 0.3em;
+}
+
+.btn-like,
+.btn-normal{
+	border: 1px solid #c9c9c9;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+}
+
+.btn-like:before{
+	content:'';
+	margin-right:5px;
+	display: inline-block;
+	vertical-align:middle;
+	width:24px;
+	height:24px;
+	background: url(../images/icon-set.png) no-repeat -168px 0px;
+}
+
+.btn-notice{
+	color: #fff;
+	background: rgb(255, 106, 0);
+    border: 1px solid rgb(255, 154, 0);
+    cursor: pointer;
+}
+
+.btn-notepubs{
+	width:50px;
+	height:50px;
+	background:#408080 url("../images/ic_expand_more_black_24dp_1x.png") no-repeat center;
+	color:#ffffff;
+	border-radius: 25px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	z-index: 999;
+	position: relative;
+	font-size:80px;
+	cursor: pointer;
+}
+
+.btn-chapter-add{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -216px -0px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-note-add{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -192px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-note-write{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -120px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-note-edit{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -336px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    
+    cursor: pointer;
+}
+
+.btn-edit,
+.btn-chapter-edit,
+.btn-note-edit-mode{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -144px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-note-title-edit,
+.btn-chapter-title-edit{
+	width:24px;
+	height: 24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;    
+    vertical-align: middle;
+    
+	background:url("../images/icon-set.png") no-repeat -744px 0px;
+	
+	cursor: pointer;
+}
+
+.btn-del,
+.btn-chapter-del,
+.btn-note-del{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -720px 0px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    
+    cursor: pointer;
+}
+
+.btn-cancel,
+.btn-chapter-cancel,
+.btn-chapter-add-cancel,
+.btn-chapter-edit-cancel,
+.btn-chapter-title-edit-cancel,
+.btn-note-title-edit-cancel,
+.btn-note-add-cancel,
+.btn-note-edit-cancel{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -216px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-chapter-up,
+.btn-note-up,
+.btn-up{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -24px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-chapter-down,
+.btn-note-down,
+.btn-down{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -48px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-done,
+.btn-chapter-done,
+.btn-chapter-add-done,
+.btn-chapter-edit-done,
+.btn-chapter-title-edit-done,
+.btn-note-title-edit-done,
+.btn-note-add-done{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat 0px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    
+    cursor: pointer;
+}
+
+.btn-note-link{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -72px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    
+    cursor: pointer;
+}
+
+
+
+.input{
+	box-sizing:border-box;
+	display: inline-block;
+    width: auto;
+    width:100%;
+    vertical-align: middle;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.input.multi{
+	height: auto;
+	min-height: 100px;
+}
+
+.input.half{
+	width:50%;
+}
+
+.label{
+	font-size: 12px;
+	text-align: right;
+	width: 60px;
+}
+
+.symbol:before{
+	content: '';
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+}
+
+.note-symbol:before{
+    background: url(../images/icon-set.png) no-repeat -264px 0px;
+}
+
+.book-symbol:before{
+    background: url(../images/icon-set.png) no-repeat -360px 0px;
+}
+
+.comment-symbol:before{
+    background: url(../images/icon-set.png) no-repeat -292px 0px;
+}
+
+.symbol-title{	
+	color:#595959;
+	font-size:18px;
+	height: 24px;
+	line-height: 24px;
+	margin:10px;
+	text-align: left;
+}
+
+.symbol-sub-title{
+	float:left;
+}
+
+
+/* --- layout ---------------------------------------------------------------------------------------- */
+.inline-block{
+	display: inline-block;
+}
+
+.flex-list{
+	display: flex;
+}
+
+/* --- alignment ------------------------------------------------ */
+.text-center{
+	text-align: center;
+}
+
+.padding-bottom{
+	padding-bottom: 20px;
+}
+
+.margin-bottom{
+	padding-bottom: 20px;
+}

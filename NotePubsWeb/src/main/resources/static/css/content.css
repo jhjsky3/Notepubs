@@ -1,0 +1,588 @@
+
+/* ---<content-section>---------------------------------------------------------- */
+
+.content-section{
+	background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    margin-top: 30px;
+    
+    transition : padding 500ms;
+    
+    overflow: hidden;
+}
+
+.content-section.first{
+	margin-top: 0px;
+}
+
+.content-section>header{    
+    display: flex;
+    align-items: center; 
+    padding: 10px 0px;
+}
+
+.content-section>header>h1{
+    font-family: '�솾�꺂�뒧占쎈뎐嶺뚣끇커占쎌맶占쎈쐻�뜝占� 占쎈쐻占쎈쑆泳�怨��렭癰귨퐦�삕占쎈섣占쎌굲', '占쎈쐻占쎈쑆泳�怨��렭癰귨퐦�삕占쎈섣占쎌굲', sans-serif;
+    font-size: 18px;
+    flex-grow: 1;    
+    padding-right: 10px;
+    
+    display: flex;
+    align-items: center;
+}
+
+.content-section>header>h1>span:first-child{
+	display: flex;
+	align-items: center;
+}
+
+.content-section>header>h1>.c-btn-default{
+	margin-left:auto;
+}
+
+.content-section>header>h2{
+    flex-grow: 2;
+    font-size: 1em;
+}
+
+.content-section .c-btn{	
+	border: 1px solid var(--basic-light-color);
+	display: initial;
+}
+
+.content-section .c-btn{	
+	background: url(/image/icon-set.png) no-repeat -100px top;
+	
+}
+
+@media screen and (min-width: 400px) {		
+		
+	
+}
+
+@media screen and (min-width: 800px) {
+	
+	.content-section{
+		padding: 10px; 
+	}
+	
+	.content-section>header{  
+	    padding: 10px 10px;
+	}
+		
+	
+	.content-section>.content{
+		margin: 10px;
+	}
+	
+}
+
+@media screen and (min-width: 1000px) {
+		
+}
+/* --- content ------------------------------------------------ */
+
+	.content-section>.content{
+		margin-top: 20px;
+		background: #fff;
+		transition: 1s;
+		
+	}
+
+
+/* --- form-content ----------------------------------------------------------------- */
+.form-content{	
+	border:1px solid #e0e0e0;
+	padding:20px;
+}
+
+.form-content fieldset,
+.form-content .fieldset{
+	
+}
+
+.form-content fieldset>*,
+.form-content .fieldset>*{
+	display: block;
+	margin-top: 1rem;
+}
+
+.form-content fieldset>label,
+.form-content .fieldset>.label{
+	font-weight: bold;
+}
+
+@media screen and (min-width: 400px) {
+		
+
+}
+
+@media screen and (min-width: 800px) {
+	.form-content{	
+		margin:10px;		
+	}
+
+	.form-content fieldset{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.form-content fieldset>*{
+		margin-left:10px;
+	}
+		
+	.form-content fieldset>label,
+	.form-content .fieldset>.label{
+		flex-shrink: 0;
+	}
+	
+	.form-content fieldset>select,
+	.form-content fieldset>input,
+	.form-content .fieldset>.select
+	.form-content .fieldset>.input{
+		
+	}
+	
+	.form-content fieldset>.button-block{
+		flex-shrink: 0;
+	}
+	
+}
+
+@media screen and (min-width: 1000px) {
+	
+}
+
+
+
+/* --- flow-content ----------------------------------------------------------------- */
+.flow-content{
+	background: var(--basic-dark-color);
+	padding:5px;
+	
+	display: flex;
+	flex-flow: row wrap;
+	
+}
+
+.flow-content>*{
+	background: #fff;
+	border-radius: 5px;
+	
+	border: 1px solid #e0e0e0;
+	padding: 5px;
+}
+
+.flow-content:before{
+	content: '';
+    background: none;
+    border-left: none;
+    border-right: none;
+    width: 0px;
+    height: 100%;
+    margin-right: 0px;
+	
+}
+
+/* ---#########  [list]  ############################################- */
+
+
+.list-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.list-content>*{
+	flex-grow:1;
+	
+}
+
+
+/* .list-content li, */
+.list-content .list-item{	
+    font-family: Noto Sans DemiLight,AppleSDGothicNeo-Regular,'Malgun Gothic','癲ル슢�뵯筌ㅻĿ�쐻�뜝占� �뜝�뜦維곦펺蹂ｏ옙�뼲�삕',dotum,'�뜝�뜦維곦펺蹂ｏ옙�뼲�삕',sans-serif;
+        
+    display:flex;	
+    height: 52px;
+    line-height: 52px;
+    
+    margin-bottom: -1px;
+    border: 1px solid var(--basic-light-color);
+    background: #fff;
+    box-sizing: border-box;
+    
+}
+
+/* .list-content li.current, */
+.list-content .list-item.current{
+	background: #f7ffd2;
+}
+
+/* .list-content li:before, */
+.list-content .list-item:before{
+	content:'';
+	display: block;	
+	border-left:10px solid var(--basic-light-color);
+	width:20px;
+	height: 100%;
+		
+	flex-shrink: 0;
+}
+
+/* .list-content li .title, */
+.list-content .list-item .title{
+	flex-grow: 1;	
+	
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* .list-content li .tool, */
+.list-content .list-item .category{		
+	display: none;
+}
+
+.list-content .list-item .tool{
+	margin:0px 10px;
+	flex-shrink: 0;	
+	visibility:hidden;
+}
+
+/* .list-content li .tool.show-hover, */
+.list-content .list-item .title.show-hover{
+	visibility:hidden;
+}
+
+
+/* .list-content li:hover .tool.show-hover, */
+.list-content .list-item:hover .tool.show-hover{
+	visibility:visible;
+}
+
+
+@media screen and (min-width: 576px) {
+	
+	.list-content fieldset{
+		padding: 10px;
+	}
+	
+	.list-content .list-item{	    
+	    padding-right: 0px;
+	}
+	
+	.list-content .list-item .tool{		
+		display: initial;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	
+	.list-content form{		
+		padding: 0px;
+	}
+	
+	.list-content fieldset{
+		padding: 10px;
+	}
+		
+	.list-content form .list-item {
+		height:auto;
+		flex-wrap: wrap;
+	}
+	.list-content form .list-item:before {
+		width:0px;
+		border-left: 0px;
+	}
+	
+}
+
+@media screen and (min-width: 1000px) {
+	.list-content{		
+		border: 1px solid var(--basic-light-color);
+		padding: 20px;
+	}
+}
+
+
+
+
+
+
+/* --- dragging list --------------------------------------------------------- */
+
+/* .list-content .draggable-list li:before, */
+.list-content .draggable-list .list-item:before{
+	content:'';
+	display: block;
+	background: url("/images/icon/baseline-drag_indicator-24px.svg") no-repeat center;
+	border-left:10px solid var(--basic-light-color);
+	border-right:1px solid var(--basic-light-color);
+	width:40px;
+	height: 100%;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+/* .list-content .draggable-list li.no-drag, */
+.list-content .draggable-list .list-item.no-drag{
+	height: auto;
+	line-height: 35px;
+	padding:0px 10px 10px 0px;
+	box-sizing: border-box;
+	background: var(--basic-color);
+}
+
+/* .list-content .draggable-list li.no-drag:before, */
+.list-content .draggable-list .list-item.no-drag:before{
+	background: none;
+	border:none;
+	width:0px;
+}
+
+
+/* ### <table list >###################################################################### */
+
+/*---< table form >-----------------------------------------------------------------------------*/
+.table-form{
+	
+}
+
+.table-form fieldset{
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-end;
+}
+
+.table-form fieldset>*{
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+		
+}
+
+@media screen and (max-width: 800px) {
+	.table-form fieldset select,
+	.table-form fieldset label {
+		display: none;
+	}
+	
+}
+
+@media screen and (max-width: 400px) {
+	
+	
+}
+
+/* --- table style ----------------------------------------------------------------------- */
+.table{
+	width:100%;
+	border: none;
+	border-collapse: collapse;	
+}
+
+.table thead{
+	background: #808080;
+	color:#fff;
+}
+
+.table tr{
+	height: 40px;	
+}
+
+.table td,
+.table th{
+	text-align: center;
+}
+
+
+.table td:nth-child(3),
+.table td:nth-child(1),
+.table th:nth-child(3),
+.table th:nth-child(1){
+	display: none;
+}
+
+.table td:last-child,
+.table th:last-child{
+	display: none;
+}
+
+.table td.w-1,
+.table th.w-1{
+	width:50px;
+}
+
+.table td.w-2,
+.table th.w-2{
+	width:100px;
+}
+
+.table td.w-3,
+.table th.w-3{
+	width:150px;
+}
+
+.table td.align-left,
+.table th.align-left{
+	text-align: left;
+}
+
+.table td.align-center,
+.table th.align-center{
+	text-align: center;
+}
+
+.table td.align-right,
+.table th.align-right{
+	text-align: right;
+}
+
+.table td.indent,
+.table th.indent{
+	text-indent: 10px;
+}
+
+
+/* --- bordered table ------------------------------------------------*/
+.table.bordered-table{	
+	border: 1px solid var(--basic-color);
+}
+
+.table.bordered-table td,
+.table.bordered-table th{
+	border: 1px solid var(--basic-color);
+}
+
+/* --- horizontal table ------------------------------------------------*/
+.table.horizontal-table{	
+	border: none;
+}
+
+.table.horizontal-table td,
+.table.horizontal-table th{
+	border-bottom: 1px solid var(--basic-color);
+}
+
+/* --- hoverable table ------------------------------------------------*/
+.table.hoverable-table tbody tr:hover{
+	background: var(--basic-light-color);
+}
+
+
+/* --- table color ------------------------------------------------*/
+.table.table-color-admin thead{
+	background: var(--main1-color);
+}
+
+.table.table-color-member thead{
+	background: var(--main2-color);
+}
+
+.table.bordered-table.table-color-admin{	
+	border: 1px solid var(--main1-color);
+}
+
+.table.bordered-table.table-color-member{	
+	border: 1px solid var(--main2-color);
+}
+
+.table.bordered-table.table-color-admin td,
+.table.bordered-table.table-color-admin th{
+	border: 1px solid var(--main1-color);
+}
+
+.table.bordered-table.table-color-member td,
+.table.bordered-table.table-color-member th{
+	border: 1px solid var(--main2-color);
+}
+
+.table.hoverable-table.table-color-admin tbody tr:hover{
+	background: var(--main1-light-color);
+}
+
+.table.hoverable-table.table-color-member tbody tr:hover{
+	background: var(--main2-light-color);
+}
+
+
+	
+@media screen and (min-width: 576px) {
+	
+	
+	.table td:last-child,
+	.table th:last-child{
+		display: table-cell;
+	}
+		
+}
+
+@media screen and (min-width: 800px) {
+	
+	.table td:nth-child(3),
+	.table td:nth-child(1),
+	.table th:nth-child(3),
+	.table th:nth-child(1){
+		display: table-cell;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	
+}
+
+
+
+
+
+/*---< pager >-----------------------------------------------------------------------------*/
+.pager{
+	padding:30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 16px;
+}
+
+    .pager ul{
+        display: flex;        
+    }
+
+        .pager>div{
+            display: flex;
+        }
+
+        .pager ul li{
+            width:20px;
+            height: 20px;   
+            text-align: center;         
+        }
+
+		.pager ul li a.current{
+            font-weight: bold;
+            color:orange;
+        }
+		
+
+        .pager>div>div:first-child{
+            width: 20px;
+            height: 20px;
+            background: url(/images/btn-prev.png) no-repeat center;
+            text-indent: -999px;
+            overflow: hidden;
+        }
+
+        .pager>div>div:last-child{
+            width: 20px;
+            height: 20px;
+            background: url(/images/btn-next.png) no-repeat center;
+            text-indent: -999px;
+            overflow: hidden;
+        }

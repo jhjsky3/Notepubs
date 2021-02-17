@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.font-test{
+    font-family: 'Jua', cursive;
+    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Nanum Brush Script', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body *{
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 10px;
+}
+
+html, body{
+	height: 100%;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+}
+
+input,select{
+	outline:none;
+	border: 1px solid #99c243;
+    border-radius: 4px;	
+	
+	display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    overflow: hidden;
+    padding: .3rem .6rem;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+.admin input,
+.admin select{
+	border: 1px solid #E0E5EE;
+}
+a{
+	text-decoration: none;
+}
+
+/* --- color --------------------------------------- */
+
+:root{
+	--basic-color: #c0c0c0;
+	--basic-light-color: #e9e9e9;
+	--basic-dark-color: #898989;
+	
+	--main1-color: #8dc21f;
+	--main1-light-color: #f7ffd2;
+	--main1-dark-color: #648916;
+	
+	--main2-color: #eac209;
+	--main2-light-color: #faf3d3;	
+	--main2-dark-color: #9d7a00;
+	
+}
+
+.color-note{
+	color:var(--main1-color);
+}
+
+.color-book{
+	color:var(--main2-color);
+}
+
+.color-printed{
+	color:var(--main3-color);
+}
+
+
+.bg-main1{
+	background-color: var(--main1-color)!important;
+}
+
+/* ---  ------------------------------------------------------ */
+
+.clipper,
+.overflow-hidden{
+	overflow: hidden;
+}
+		
+.alt-image{
+	display:inline-block;
+	overflow:hidden;
+	text-indent:-999px;	
+}
+
+/* --- hack --------------------------- */
+.clear-fix:after{
+	content: '';
+	display: block;
+	overflow: hidden;
+	clear: both;
+	height: 0px;
+}
+
+
+/* --- button style ----------------------------------------- */
+
+.btn{
+	text-decoration:none;
+	color:#000;
+	display: inline-block;
+    padding: 6px 20px;
+    border: 1px solid #dbdfe5;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #FFF;
+    text-align: center;
+    
+    cursor: pointer;
+}
+
+.btn-img{
+	display:inline-block;
+	overflow:hidden;
+	text-indent:-999px;
+}
+
+.btn.btn-cancel{		
+	background: #595959;
+	color: #fff;
+	text-indent: 0px;
+	cursor: pointer;
+}
+
+.btn.btn-label{
+	font-size: 12px;
+	border-radius: 5px;
+	height: 10px;
+	line-height: 10px;
+	padding: 8px 20px;	
+	cursor: pointer;
+}
+
+.btn.btn-default{
+	color: #fff;
+    background-color: var(--basic-color);
+    border-color: var(--basic-dark-color);
+    cursor: pointer;
+}
+
+.btn.btn-default.btn-color-admin{
+	color: #fff;
+    background-color: var(--main1-color);
+    border-color: var(--main1-color);
+    cursor: pointer;
+}
+
+.btn.btn-default.btn-color-member{
+	color: #fff;
+    background-color: var(--main2-color);
+    border-color: var(--main2-color);
+    cursor: pointer;
+}
+
+.btn.btn-note{
+	color: #fff;
+    background-color: #8dc21f;
+    border-radius: 0.3em;
+}
+
+.btn.btn-book{
+	color: #fff;
+    background-color: #ffc600;
+    border-radius: 0.3em;
+}
+
+.btn.btn-published{
+	color: #fff;
+    background-color: #498bc7;
+    border-radius: 0.3em;
+}
+
+.btn-like,
+.btn-normal{
+	border: 1px solid #c9c9c9;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+}
+
+.btn-like:before{
+	content:'';
+	margin-right:5px;
+	display: inline-block;
+	vertical-align:middle;
+	width:24px;
+	height:24px;
+	background: url(../images/icon-set.png) no-repeat -168px 0px;
+}
+
+.btn-notice{
+	color: #fff;
+	background: rgb(255, 106, 0);
+    border: 1px solid rgb(255, 154, 0);
+    cursor: pointer;
+}
+
+.btn-notepubs{
+	width:50px;
+	height:50px;
+	background:#408080 url("../images/ic_expand_more_black_24dp_1x.png") no-repeat center;
+	color:#ffffff;
+	border-radius: 25px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	z-index: 999;
+	position: relative;
+	font-size:80px;
+	cursor: pointer;
+}
+
+.btn-chapter-add{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -216px -0px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-note-add{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -192px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-note-write{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -120px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-note-edit{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -336px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    
+    cursor: pointer;
+}
+
+.btn-edit,
+.btn-chapter-edit,
+.btn-note-edit-mode{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -144px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-note-title-edit,
+.btn-chapter-title-edit{
+	width:24px;
+	height: 24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;    
+    vertical-align: middle;
+    
+	background:url("../images/icon-set.png") no-repeat -744px 0px;
+	
+	cursor: pointer;
+}
+
+.btn-del,
+.btn-chapter-del,
+.btn-note-del{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -720px 0px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    
+    cursor: pointer;
+}
+
+.btn-cancel,
+.btn-chapter-cancel,
+.btn-chapter-add-cancel,
+.btn-chapter-edit-cancel,
+.btn-chapter-title-edit-cancel,
+.btn-note-title-edit-cancel,
+.btn-note-add-cancel,
+.btn-note-edit-cancel{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -216px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-chapter-up,
+.btn-note-up,
+.btn-up{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -24px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-chapter-down,
+.btn-note-down,
+.btn-down{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -48px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-done,
+.btn-chapter-done,
+.btn-chapter-add-done,
+.btn-chapter-edit-done,
+.btn-chapter-title-edit-done,
+.btn-note-title-edit-done,
+.btn-note-add-done{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat 0px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    
+    cursor: pointer;
+}
+
+.btn-note-link{
+	width:24px;
+	height: 24px;
+	background:url("../images/icon-set.png") no-repeat -72px -24px;
+	
+	text-decoration:none;	
+	display: inline-block;    
+    border:none;
+    border-radius: 12px;
+    text-indent: -999px;
+    
+    vertical-align: middle;
+    
+    cursor: pointer;
+}
+
+.btn-img.btn-expand{
+	width:24px;
+	height:24px;
+	background: url("/images/icon/ic_menu_black_24dp_1x.png") no-repeat center;
+}
+
+.btn-img.btn-profile{
+	width:30px;
+	height:30px;
+	background: url("/images/picture-empty.png") no-repeat center;
+	background-size: contain;
+	border-radius: 15px;
+}
+
+/* --- input ----------------------------------------------- */
+
+[type='text'], 
+[type='number'], 
+[type='tel'], 
+[type='file'], 
+[type='password'], 
+[type='email'], 
+[type='search'], 
+[type='url'], 
+[type='submit'], 
+textarea, 
+select{
+	vertical-align: middle; 
+    width: 100%;
+    min-width: 12rem;
+    height: 3.5rem;
+    padding: 0 1.6rem;
+    border: 0.1rem solid #d3d3d3;
+    border-radius: 0;
+    background: #fff;
+    font-size: 1.4rem;
+    color: #424242;
+    line-height: 4rem;    
+}
+
+
+/* .input{
+	box-sizing:border-box;
+	display: inline-block;
+    width: auto;
+    width:100%;
+    vertical-align: middle;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.input.multi{
+	height: auto;
+	min-height: 100px;
+}
+
+.input.half{
+	width:50%;
+}
+ */
+.label{
+	font-size: 12px;
+	text-align: right;
+	width: 60px;
+}
+
+/* --- symbol ------------------------------------------------ */
+
+.symbol:before{
+	content: '';
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+}
+
+.note-symbol:before{
+    background: url(../images/icon-set.png) no-repeat -264px 0px;
+}
+
+.book-symbol:before{
+    background: url(../images/icon-set.png) no-repeat -360px 0px;
+}
+
+.comment-symbol:before{
+    background: url(../images/icon-set.png) no-repeat -292px 0px;
+}
+
+
+.symbol-title{	
+	color:#595959;
+	font-size:18px;
+	height: 24px;
+	line-height: 24px;
+	margin:10px;
+	text-align: left;
+}
+
+.symbol-sub-title{
+	float:left;
+}
+
+/* --- custome color ------------------------ */
+.color-notice{
+	color:#ff6a00;
+}
+

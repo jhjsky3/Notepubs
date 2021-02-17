@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+:root {
+    --color-primary: pink;
+    --color-primary-dark: pink;
+    --color-primary-light: pink;
+    --color-secondary: pink;
+    --color-secondary-dark: pink;
+    
+    --header-height:66px;
+}
+
+.font-test{
+    font-family: 'Jua', cursive;
+    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Nanum Brush Script', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+}
+
+input,select{
+	outline:none;
+	border: 1px solid #99c243;
+    border-radius: 4px;	
+	
+	display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    overflow: hidden;
+    padding: .3rem .6rem;
+}
+
+.admin input,
+.admin select{
+	border: 1px solid #E0E5EE;
+}
+
+a{
+	text-decoration: none;
+	
+}
+
+.d-none{
+    display: none;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-align-items-center{
+    align-items: center;
+}
+
+.flex-grow-1{
+    flex-grow:1;
+}
+
+.text-align-center{
+	text-align: center;
+}
+
+.text-align-right{
+	text-align: right;
+}
+
+.margin-top{
+	margin-top:10px;
+}

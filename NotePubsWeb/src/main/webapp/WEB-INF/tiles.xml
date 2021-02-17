@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  <definition name="layout.common" template="/WEB-INF/view/inc/layout.jsp">
+    <put-attribute name="title" value="Note Pubs에 오신 것을 환영합니다." />    
+    <put-attribute name="header" value="/WEB-INF/view/inc/header.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/view/inc/footer.jsp" />
+  </definition>
+  
+  <!--##### home layout ########## -->  
+  <definition name="home.layout" template="/WEB-INF/view/inc/layout.jsp" extends="layout.common">    
+    <put-attribute name="aside" value="/WEB-INF/view/inc/aside.jsp" />
+  </definition>
+  <definition name="home.*.*" extends="home.layout" preparer="com.notepubs.web.config.NoteViewPreparer">
+    <put-attribute name="css" value="{1}/{2}.css" />
+    <put-attribute name="js" value="{1}/{2}.js" />
+    <put-attribute name="main" value="/WEB-INF/view/{1}/{2}.jsp" />
+  </definition>
+  <definition name="home.*" extends="home.layout" preparer="com.notepubs.web.config.NoteViewPreparer">
+    <put-attribute name="css" value="{1}.css" />
+    <put-attribute name="js" value="{1}.js" />
+    <put-attribute name="main" value="/WEB-INF/view/{1}.jsp" />
+  </definition>
+  
+  <!--##### member layout ########## -->
+  <definition name="member.layout" template="/WEB-INF/view/member/inc/layout.jsp" extends="layout.common" preparer="com.notepubs.web.config.MemberViewPreparer">
+    <put-attribute name="aside" value="/WEB-INF/view/member/inc/aside.jsp" />
+  </definition>
+  <definition name="member.*.*" extends="member.layout">    
+    <put-attribute name="css" value="{1}/{2}.css" />
+    <put-attribute name="js" value="{1}/{2}.js" />
+    <put-attribute name="main" value="/WEB-INF/view/member/{1}/{2}.jsp" />    
+  </definition>
+  <definition name="member.*" extends="member.layout">    
+    <put-attribute name="css" value="{1}.css" />
+    <put-attribute name="js" value="{1}.js" />
+    <put-attribute name="main" value="/WEB-INF/view/member/{1}.jsp" />
+  </definition>
+     
+  <!--##### home layout ########## -->  
+  <definition name="admin.layout" template="/WEB-INF/view/admin/inc/layout.jsp" extends="layout.common" preparer="com.notepubs.web.config.MemberViewPreparer">
+    <put-attribute name="aside" value="/WEB-INF/view/admin/inc/aside.jsp" />
+  </definition>
+  <definition name="admin.*.*" extends="admin.layout">    
+    <put-attribute name="css" value="{1}/{2}.css" />
+    <put-attribute name="js" value="{1}/{2}.js" />
+    <put-attribute name="main" value="/WEB-INF/view/admin/{1}/{2}.jsp" />
+  </definition>
+  <definition name="admin.*" extends="admin.layout">    
+    <put-attribute name="css" value="{1}.css" />
+    <put-attribute name="js" value="{1}.js" />
+    <put-attribute name="main" value="/WEB-INF/view/admin/{1}.jsp" />
+  </definition>
+  
+</tiles-definitions>

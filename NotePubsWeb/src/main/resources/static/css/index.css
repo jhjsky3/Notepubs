@@ -1,0 +1,413 @@
+@charset "UTF-8";
+
+main{
+	margin:auto 10px;
+}
+
+.todays-book>h1{
+	font-size: 18px;
+	font-weight: bold;
+	color:#408080;
+	margin-top: 20px;
+}
+
+
+.flip-note-list *{
+
+	box-sizing:border-box;
+}
+.flip-note-list{
+	margin:5% auto;
+	height: 100%;
+		
+}
+
+.flip-note{
+	background: #fff;
+	border-right:1px solid #797979;
+	
+	display: flex;
+	flex-flow: row wrap;
+	
+	position: relative;
+}
+
+.flip-note h1{
+	font-size: 18px;
+	font-weight: bold;
+	margin:10px 0px;
+}
+
+.flip-note>div{
+	/* width: calc(100% - 40px); */
+	padding: 20px;
+	/* border:1px solid #999; */
+	flex:1 1 auto;
+}
+
+.flip-note .info{
+	position: absolute;
+	left:0px;
+	bottom:0px;
+	background-color: #fff;
+	
+	height: 50px;
+	width:100%;
+	border-top: 1px solid #797979;
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/*--- list-section ------------------------------------------------------------*/
+.list-section>h1{
+	font-size: 18px;
+	font-weight: bold;
+}
+/*--- note-section ----------------------------------------------------------------------*/
+.note-section .clipper{
+	padding: 10px 0px;
+	
+	/* Make this scrollable on Mobile */
+    overflow-x: auto;
+    overflow-y: hidde
+}
+
+.note-section>h1{
+	
+}
+
+.note-section>h1 .btn-note-prev,
+.note-section>h1 .btn-note-next{
+	display: none;
+}
+
+.note-list{
+	display: flex;
+	flex-wrap: nowrap;
+	
+}
+
+	
+	.note{
+		font-family: "Noto Sans Medium", AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, 돋움, sans-serif;
+		margin-right:20px;
+		width:250px;
+		height:320px;		
+		
+		--note-padding:15px;			
+		padding:var(--note-padding);
+		
+		background:#fff;
+		box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);
+	    border-radius: 0.5rem;
+	    overflow: hidden;
+	    
+	    flex-shrink: 0;
+	    flex-grow:0;
+	    
+	    display: flex;
+	    flex-direction: column;
+	    
+	    position: relative;
+	}
+	
+	.note>h1{
+		font-size:16px;
+		font-weight: bold;
+	}
+	
+	.note .note-content{
+		font-size:14px;
+		padding: 10px 5px;				
+		overflow: hidden;
+		
+		flex-grow: 1;
+	}
+	
+	.note div.info{
+		font-size:12px;
+		
+		border-top:1px solid gray;
+		height: 40px;
+		line-height: 40px;
+		
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.note div.cover{
+		position: absolute;				
+		left:0px;
+		top:100%;
+						
+		background: #0008;				
+		
+		width:100%;
+		height: 100%;
+		
+		transition: 500ms;
+		
+		box-sizing:border-box;
+		padding:30px 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+	
+	.note:hover div.cover{
+		top:0%;
+		
+	}
+	
+	.note div.cover>footer{
+		font-size: 12px;
+	}
+	
+		.note .show-button,
+		.note .edit-button,
+		.note .del-button
+		{
+			cursor:pointer;
+		}
+		
+		.note .show-button>a,
+		.note .edit-button>a,
+		.note .del-button>a
+		{
+			padding:7px;
+			font-weight: bold;
+			color:#000;
+			background: #fff;
+			opacity:0;
+			
+			transition: opacity 500ms;
+		}
+		
+		.note .show-button:hover>a,
+		.note .edit-button:hover>a,
+		.note .del-button:hover>a
+		{
+			opacity:1;
+		}
+					
+		.note .show-button{
+			width:70px;
+			height:70px;
+			
+			background: url("/images/icon/description-white-150px.png") no-repeat;
+			background-size: contain;
+		}
+		
+		.note .edit-button{
+			width:70px;
+			height:70px;
+			
+			background: url("/images/icon/edit-white-24px.png") no-repeat;
+			background-size: contain;
+		}
+		
+		.note .del-button{
+			width:70px;
+			height:70px;
+								
+			background: url("/images/icon/delete_forever-white-24px.png") no-repeat;
+			background-size: contain;
+		}
+		
+@media screen and (min-width: 576px) {
+	
+	.note-section .clipper{		
+	    overflow-x: hidden;
+	}
+	
+	.note-section>h1 .btn-note-prev,
+	.note-section>h1 .btn-note-next{
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	
+}
+
+
+@media screen and (min-width: 1000px) {
+	
+	
+}
+/*--- book-list ----------------------------------------------------------------------*/
+.book-section{
+	margin-top: 10px;
+}
+	
+.book-section .clipper{
+	padding: 30px 0px;	
+	
+	margin-top: -20px;	
+}
+
+.book-list{
+	display: flex;
+	flex-wrap: nowrap;		
+}
+
+	.book{
+		font-family: "Noto Sans Medium", AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, 돋움, sans-serif;
+		margin-right:20px;
+		width:150px;
+		height:200px;	
+								
+		padding:15px;		
+						
+		background:#fff;
+		box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);			    
+	    /* overflow: hidden; */
+    
+    flex-shrink: 0;
+    flex-grow:0;
+    
+    display: flex;
+    flex-direction: column;
+    
+    position: relative;
+    
+    perspective: 2000px; /* for 3D Effect */
+    transition: transform 500ms, margin-right 500ms ease-in-out 500ms;		    
+}
+
+.book:hover{
+	margin-right:50px;
+}	
+	.book p{
+		font-size:14px;
+		padding: 0px 5px;				
+		overflow: hidden;
+		
+		flex-grow: 1;
+	}
+	
+	.book div.info{
+		font-size:12px;
+		
+		border-top:1px solid gray;
+		height: 40px;
+		line-height: 40px;
+		
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.book div.cover{				
+		position: absolute;				
+		left:0px;
+		top:0px;
+		transform-origin:left;
+		transform-style: preserve-3d;
+		transform:rotateY(0deg);
+		/* backface-visibility : hidden; */
+									
+		
+		/* background: #fff url("/images/book-cover/java.png") no-repeat; */
+		/* background-size: contain; */
+		box-shadow: 14px 8px 30px #999;
+		
+		width:100%;
+		height: 100%;
+		
+		transition: transform 500ms ease-in-out;
+		
+		box-sizing:border-box;
+		padding:20px 10px 10px 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		
+		cursor: pointer;		
+	}
+	
+	.book div.cover>h1{
+		font-size:16px;
+		font-weight: bold;
+	}
+	
+	.book div.cover>footer{
+		font-size: 12px;
+	}
+		
+	.book div.book-buttons{
+		
+		display: flex;
+		flex-direction: column;
+		align-items:center;
+				
+		font-size: 14px;
+		
+		transition: transform 500ms ease-in-out 500ms;
+		
+		margin-top: -30px;				
+	}
+		
+	.book div.book-buttons>a{
+		margin-top: 10px;
+		text-align:right;
+		padding:5px 10px;
+		width:100%;
+		color: #fff;
+		font-weight: bold;
+	}
+	
+	.book div.book-buttons>a:nth-child(1){								
+		background: #00afaf90;
+	}	
+	.book div.book-buttons>a:nth-child(2){								
+		background: #0000ff90;
+	}
+	.book div.book-buttons>a:nth-child(3){								
+		background: #ff00ff90;
+	}
+	.book div.book-buttons>a:nth-child(4){								
+		background: #ff000090;
+	}
+	
+	/* --- book:hover -------------------------------- */
+	
+	.book:hover div.cover,
+	.book.hover div.cover
+	{		
+		transform:rotateY(-45deg);
+	}
+	
+	.book:hover div.cover>footer,
+	.book.hover div.cover>footer{
+		font-size: 12px;				
+	}
+	
+	.book:hover div.book-buttons,
+	.book.hover div.book-buttons{				
+		transform:translateX(40px);
+	}
+	
+@media screen and (min-width: 576px) {
+	
+	
+	.todays-book>h1{
+		font-size:20px;
+		margin-top: 0px;
+	}
+	
+}
+
+@media screen and (min-width: 800px) {
+	
+}
+
+
+@media screen and (min-width: 1000px) {
+	
+	
+}
+	

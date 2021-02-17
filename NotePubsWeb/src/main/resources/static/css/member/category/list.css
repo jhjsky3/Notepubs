@@ -1,0 +1,18 @@
+
+
+.content form{
+	border:1px solid #dee2e6;
+	padding: 20px;	
+}
+
+.content form fieldset>* {	
+	display: block;
+}
+
+.content form fieldset>label{
+	font-weight: bold;
+}
+
+.content form fieldset>.tool{
+	text-align: right;
+}

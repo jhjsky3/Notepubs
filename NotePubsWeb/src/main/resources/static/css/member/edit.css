@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import url("/css/inc/note.css");
+
+
+
+.btn-save{
+	width: auto;
+	
+}
+
+.content-section{
+	
+    padding: 20px 20px 30px 20px;
+}
+
+@media screen and (min-width: 596px) {
+	.tool-list>div {
+	    width: 100%;
+	}
+}
+
+@media screen and (min-width: 906px) {
+	
+	
+}
+@media screen and (min-width: 1000px) {
+	
+}

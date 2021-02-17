@@ -1,0 +1,3 @@
+class MyActivity : AppCompatActivity() {
+  // ...
+}

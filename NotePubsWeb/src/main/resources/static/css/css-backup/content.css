@@ -1,0 +1,1029 @@
+
+
+
+/* --- table style ----------------------------------------------------------------------- */
+.main .table {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	border: 1px solid #e9e9e9;
+}
+
+.main .table input[type=text],
+.main .table input[type=password],
+.main .table input[type=email],
+.main .table input[type=date],
+.main .table input[type=number],
+.main .table select
+{
+	width:90%;
+	vertical-align: middle;
+	height: 24px;
+	line-height: 24px;
+	text-indent: 5px;
+	border:1px solid #e9e9e9;
+	border-radius: 5px; 
+}
+
+.main .table input[type=text].width-auto,
+.main .table input[type=password].width-auto,
+.main .table input[type=number].width-auto,
+.main .table select.width-auto{
+	width: auto;
+}
+
+.main .table input[type=text].width-half,
+.main .table input[type=password].width-half,
+.main .table input[type=email].width-half,
+.main .table input[type=date].width-half,
+.main .table select.width-half{
+	width: 200px;
+}
+
+.main .table input[type=text].width-small,
+.main .table input[type=password].width-small,
+.main .table select.width-small{
+	width: 50px;
+}
+
+.main .table input[type=text].width-small,
+.main .table input[type=password].width-small,
+.main .table select.width-auto{
+	width: auto;
+}
+
+.main .table textarea,
+.main .table .textarea{
+	/* border:1px solid #e9e9e9;
+	border-radius: 10px; */
+	
+	padding: 5px;
+	width:100%;
+	min-height:400px;
+	
+	line-height: 24px; 
+	/* text-align: center; */
+}
+
+.main .table.border-top-default {
+	border-top: 1px solid #e9e9e9;
+}
+
+.main .table.border{
+	border-left:1px solid #e9e9e9;
+	border-right:1px solid #e9e9e9;	
+}
+
+.main .table.border-top-none{
+	border-top:0px solid #fff;
+}
+
+
+.main .table.h50 th,
+.main .table.h50 td
+{
+	height: 60px;
+}
+
+.main .table tr, .main .table .tr {
+	display: table-row;
+	height: 60px;
+}
+
+.main .table tr.content, .main .table .tr.conent {
+	display: table-row;
+	height:auto;
+	min-height: 200px;	
+	line-height: 1.5em;
+	color: #393939;	
+}
+
+.main .table tr.hover:hover{
+	background: #d6f4c1;
+	cursor:pointer;
+}
+
+/* --- 占쏙옙占쎌벥 筌뤴뫁堉� -------------------------- */
+
+.main .table td, 
+.main .table th, 
+.main .table .td,
+.main .table .th {
+	display: table-cell;
+	text-align: center;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+.main .table.dashed td, 
+.main .table.dashed th, 
+.main .table.dashed .td,
+.main .table.dashed .th {	
+	border-bottom: 1px dashed #b0b0b0;
+}
+
+.main .table th, .main .table .th {
+	background: #f5f5f5 url("../images/bg-title-sp.png") no-repeat left
+		center;
+}
+
+.main .table th:first-child, .main .table .th:first-child {
+	background: #f5f5f5;
+}
+
+.main .table th.w60, .main .table td.w60, .main .table .th.w60, .main .table .td.w60
+{
+	width: 60px;
+}
+
+.main .table th.w100, .main .table td.w100, .main .table .th.w100, .main .table .td.w100
+{
+	width: 100px;
+}
+
+.main .table th.w150, .main .table td.w150, .main .table .th.w150, .main .table .td.w150
+{
+	width: 150px;
+}
+
+.main .table th.w180, .main .table td.w180, .main .table .th.w180, .main .table .td.w180
+{
+	width: 180px;
+}
+.main .table th.w250, .main .table td.w250, .main .table .th.w250, .main .table .td.w250
+{
+	width: 250px;
+}
+
+.main .table tr.content td,
+.main .table .tr.conent td{
+	text-align: left;
+	padding: 10px;
+}
+
+.main .table tr:hover,
+.main .table .tr:hover{
+	background: #e9e9e9;
+}
+
+.main .table tr.hidden,
+.main .table .tr.hidden{
+	display: none;
+}
+
+
+.main .table td.title, 
+.main .table .td.title {
+	--font-family: 'Nanum Brush Script', cursive;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 1.2em;
+}
+
+.main .table td.indent {
+	padding-left:10px;
+}
+
+.main .table td.indent.inner {
+	padding-left:30px;
+}
+
+.main .table td .re{
+	padding-left: 20px;
+    background: url(../images/icon-re.png) no-repeat left -5px;
+}
+
+.main .table td.text-align-left{
+	text-align: left;
+}
+
+.main .table td.text-align-center{
+	text-align: center;
+}
+
+.main .table td.text-align-right{
+	text-align: right;
+}
+
+/* --- to override ----------------------------------------------------------------------------------------- */
+
+.main .hidden{
+	display: none;
+}
+
+/* --- new style ---------------------------------------------------------------------------- */
+.main .table td.-text-.indent{
+	indent: 10px;
+}
+
+.main .table td .-margin-.left{
+	margin-left: 10px;
+}
+
+.main .table td .-margin-.left.l5{
+	margin-left: 5px;
+}
+
+.main .table td .width.auto{
+	width:auto;
+}
+
+.main .table td.-text-.left{
+	text-align: left;
+}
+
+.main .table td.-text-.right{
+	text-align: right;
+}
+
+/* td 占쎄묶域뱄옙 占쎈툧占쎈퓠 占쎌뿳占쎈뮉 筌뤴뫀諭� img, label, input占쎌뱽 占쎈립甕곕뜆肉� 占쎈땾筌욑옙 揶쏉옙占쎌뒲占쎈쑓 占쎌젟占쎌졊 占쎈릭占쎈뮉 占쎈뮞占쏙옙占쎌뵬 */
+.main .table td.-text-.vertical.center > img,
+.main .table td.-text-.vertical.center > label,
+.main .table td.-text-.vertical.center > input{
+	vertical-align: middle;
+}
+
+/* td 占쎄묶域뱄옙 占쎈툧占쎈퓠 占쎌뿳占쎈뮉 筌뤴뫀諭� img, label, input占쎈퓠 揶쏄낫而� 占쎈땾筌욑옙 揶쏉옙占쎌뒲占쎈쑓 占쎌젟占쎌졊占쎌뱽 筌욑옙占쎌젟占쎈릭占쎈뮉 占쎈뮞占쏙옙占쎌뵬 */
+.main .table td input.-text-.vertical.center,
+.main .table td img.-text-.vertical.center,
+.main .table td label.-text-.vertical.center{
+	vertical-align: middle;
+}
+
+/* ===<header>======================================================*/
+.header{
+    display:flex;
+    align-content:center;
+    align-items:center;
+}
+
+
+/* ---<logo>---------------------------------------------------------- */
+.logo{
+    margin-left: 60px;
+}
+
+.main-menu{    
+	margin-left:20px;
+    font-family: "Noto Sans Medium", AppleSDGothicNeo-Regular, "Malgun Gothic", "嶺뚮씭理먨뜝占� 占썩뫁伊볣�억옙", dotum, 占썩뫁伊볣�억옙, sans-serif;
+}
+
+.main-menu li{
+    margin-left: 15px;
+}
+.main-menu li:first-child{
+    margin-left: initial;
+}
+/* ---<header-notice>---------------------------------------------------------- */
+.header-notice{
+    flex-grow: 1;
+    margin-left: 30px;;
+}
+
+.header-notice>div{
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    --text-indent: 10px;
+    padding:0px 10px;
+}
+
+/* ---<quick-menu>---------------------------------------------------------- */
+.quick-menu{
+    margin-right: 60px;
+}
+.quick-menu > ul{    
+    display: flex;
+    align-items: center;
+
+}
+
+.quick-menu > ul>li{
+    margin-left: 30px;    
+    align-items: center;
+}
+.quick-menu > ul>li:first-child{
+    margin-left: initial;
+}
+
+/* ===<aside>======================================================*/
+
+/* ---<profile>---------------------------------------------------------- */
+.profile{
+    display: inline-block;
+    border:1px solid #e0e0e0;    
+}
+
+.profile.type2{
+	border:1px solid #f0db77;	
+}
+
+
+.profile .photo{
+    height: 220px;
+    background: url(/images/bg-profile.png);
+    background-size: contain;
+    border:1px solid #e9e9e9;
+}
+
+
+.profile .info{
+    background:#fff;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile .info .url{
+    overflow: hidden;
+    max-height: 1.5em;
+    font-size: 12px;
+    letter-spacing: -0.2px;
+    word-break: break-all;
+    color: #797979;
+}
+
+
+/* ---<fav-menu>---------------------------------------------------------- */
+.fav-menu li {
+	box-sizing:border-box;
+	border-left:20px yellow solid;
+    height: 3em;
+    line-height:3em;
+    background:#99c243;
+    border-left:20px #8cb34a solid;
+    padding-left: 20px;
+	margin-top:1px;   
+}
+
+.fav-menu li.active,
+.fav-menu li:hover{
+	border-left:20px yellow solid;    
+	cursor:pointer;
+}
+
+.fav-menu li a{
+    color:#fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.fav-menu.type2 li {
+	box-sizing:border-box;
+	border-left:20px yellow solid;
+    height: 3em;
+    line-height:3em;
+    background:#eac209;
+    border-left: 20px #b09306 solid;
+    padding-left: 20px;
+	margin-top:1px;   
+}
+
+.fav-menu li.active,
+.fav-menu li:hover{
+	border-left:20px yellow solid;    
+	cursor:pointer;
+}
+
+.fav-menu li a{
+    color:#fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* ---<aside-menu>---------------------------------------------------------- */
+.aside-menu{
+	margin-top: 5px;
+	background: #fff;
+	padding-left:10px;
+	padding-bottom: 2em;
+}
+.aside-menu>h1{
+	height: 3.5em;
+	line-height: 3.5em;
+	font-weight: bold;	
+}
+
+.aside-menu li{
+	height: 2.5em;
+	line-height: 2.5em;
+	padding-left:40px;
+	border-bottom: 1px dotted #e9e9e9;
+}
+
+
+.aside-menu li.active,
+.aside-menu li:hover{
+	border-left:10px solid yellow;
+	padding-left:30px;
+	background: #e9e9e9;
+}
+
+.aside-menu.type2 li{
+	border-bottom: 1px dotted #f0db77;
+}
+
+.aside-menu.type2 li.active,
+.aside-menu.type2 li:hover{
+	border-left:10px solid yellow;
+	padding-left:30px;
+	background: #faf3d3;
+}
+
+/* ===<main>======================================================*/
+/* ---<content-section>---------------------------------------------------------- */
+
+.content-section{
+    margin-top: 30px;
+}
+
+.content-section.first{
+	margin-top: 0px;
+}
+
+.content-section>header{    
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;   
+}
+
+.content-section>header>h1{
+    font-family: '筌띾쵐占� �⑥쥓逾�', '�⑥쥓逾�', sans-serif;
+    font-size: 18px;
+    flex-grow: 1;
+}
+
+.content-section>header>h2{
+    flex-grow: 2;
+    font-size: 1em;
+}
+
+.content-section>header~*.content{
+	background: #fff;
+	padding: 20px;
+}
+
+/* ---<content-section.admin>---------------------------------------------------------- */
+
+.content-section.admin{
+    margin-top: 30px;
+}
+
+
+.content-section.admin>header{    
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;   
+}
+
+.content-section.admin>header>h1{
+    font-family: '留묒� 怨좊뵓', '怨좊뵓', sans-serif;
+    font-size: 18px;
+    flex-grow: 1;
+}
+
+.content-section.admin>header>h2{
+    flex-grow: 2;
+    font-size: 1em;
+}
+
+.content-section.admin>header~*.content{
+	background: #fff;
+	padding: 20px;
+}
+
+.content-section.admin li{
+	display: flex;
+	align-items: center;	
+	transition:transform 1s .5s, .5s height;
+	transform-origin:left top;	
+	height:50px;
+}
+
+
+.content-section.admin li span:last-child{
+	margin-right: 20px;
+}
+
+.content-section.admin li.new{
+	transform:scaleY(0);
+	height:0px;
+	overflow: hidden;
+		
+}
+.content-section.admin li .title{
+	width:300px;
+	--background: red;
+}
+
+.content-section.admin li .tool{
+	display: none;
+	
+}
+
+.content-section.admin li.edit .tool{
+	display: initial;
+	margin-left: auto;
+}
+
+.content-section.admin li:hover .tool{
+	display: initial;
+	margin-left: auto;
+}
+
+.category-list .c-btn{
+	display: initial;
+	border: 1px solid #E0E5EE;
+}
+
+/* ---<count-board>---------------------------------------------------------- */
+
+.count-board{    
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100px;
+}
+
+.count-board dl{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    align-content: flex-start;
+    align-items: center;
+    
+}
+
+.count-board dl dt,
+.count-board dl dd{
+    width:120px;
+    border-right: 1p solid gray;
+    text-align: center;
+}
+
+.count-board dl dd{
+    --font-weight: bold;
+    font-size: 22px;
+    font-family: "Jua",AppleSDGothicNeo,"留묒� 怨좊뵓",dotum,sans-serif;
+    color: #000;
+    margin-top: 10px;
+    --border:1px solid #949494;
+    width:80px;
+    flex-grow:1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---<books-writing>---------------------------------------------------------- */
+
+.books-writing .cliper{
+	overflow: hidden;
+}
+
+.books-writing .book-list{
+   
+    background: #fff;
+    padding:30px;
+    display: flex;
+    
+    flex-wrap: nowrap;
+    overflow: visible;
+    
+    
+    /* �굹以묒뿉 �닔�젙�빐�빞 �븷 �궡�슜 */
+    width:20000px;   
+    
+}
+
+
+.books-writing .book-list .book{    
+    position: relative;
+    flex-shrink: 0;
+    padding:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 2px dotted #e9e9e9;
+    
+    transition:opacity .5s;
+	transform-origin:left top;	
+	opacity:1;   
+}
+
+.books-writing .book-list .book.new-bf{
+	opacity:0;
+	overflow: hidden;
+}
+
+.books-writing .book-list .book:hover,
+.books-writing .book-list .book.current
+{
+	background: #f1f1e0;
+}
+
+.books-writing .book-list .book:first-child{	
+	border-left:none;
+}
+
+.books-writing .book-list .book>h1{    
+    font-family: 'Jua', '�⑥쥓逾�', cursive;
+    font-size: 1.3em;
+}
+
+.books-writing .book-list .book>div,
+.books-writing .book-list .book>form{
+	display: flex;
+	margin-top: 10px;
+}
+
+
+.books-writing .book-list .book .img{
+	display: inline-block;
+}
+.books-writing .book-list .book .img img{  
+   height:100%;
+   width: 100px;
+   box-shadow: 1px 1px 3px #797979;
+    /* grid-row : 1/5;
+    grid-column: 1;
+
+    display: inline-block;
+    width: 120px;
+    --height: 200px;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px #797979; */    
+
+}
+
+.books-writing .book-list .book .detail{
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
+}
+
+.books-writing .book-list .book .info{
+	flex-grow:1;
+	display: grid;
+	grid-template-columns: 50px auto;
+	grid-template-rows: repeat(6, 1fr);
+	grid-column-gap: 10px;
+	/* justify-content:flex-end;
+	min-width: 150px;
+	padding-left: 10px;
+	line-height: 2em; */
+}
+
+.books-writing .book-list .book .info dt{
+	place-self:center right;
+	
+}
+
+.books-writing .book-list .book .info dd{
+	place-self:center left;
+}
+
+.books-writing .book-list .book .info .img img{
+    width: inherit;
+    height: inherit;
+    object-fit:cover;
+    
+}
+
+.books-writing .book-list .book .info .writerId{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.books-writing .book-list .book .info .aaa{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.books-writing .book-list .book .info .button{
+    grid-column: 2;
+    grid-row: 3;
+    
+}
+
+/* ---<notice-recent>---------------------------------------------------------- */
+.notice-recent li{
+	list-style: square;
+	margin-left: 30px;
+}
+
+/* ---<note-writing>---------------------------------------------------------- */
+
+.recent-note > div{
+    background: #fff;    
+    margin-top: 10px;
+    padding:20px;
+    display: grid;    
+    grid-template-columns: repeat(4, 1fr);  
+}
+
+.recent-note >div > section{
+    width: 200px;
+    height: 250px;
+    margin: 6px;
+    border: 1px solid #E0E5EE;
+    background: #fff;    
+    grid-gap: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.recent-note >div > section>h1{
+	padding:10px;
+	font-size: 1.2em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.recent-note >div > section>div{
+	padding:10px;
+}
+
+.recent-note >div > section dl{
+	display: flex;
+	align-items:center;
+	justify-content:space-around;
+	position: absolute;
+	bottom: 0px;
+	background: #fff;
+	width: 100%;
+	height: 30px;
+	border-top: 1px solid #e9e9e9;
+}
+/* ---<list-note>---------------------------------------------------------- */
+.mng-tool{
+	background: #fff;
+	padding:30px;
+}
+
+
+.mng-tool>div{
+	display: flex;
+	align-items: center;	
+}
+
+.mng-tool>div>label{
+	margin-left:20px;
+}
+
+.mng-tool>div>label:first-child{
+	margin-left:0px;
+}
+
+.mng-tool>div>select{
+	margin-left:5px;
+}
+/* ---<list-note>---------------------------------------------------------- */
+.list-note{
+	margin-top:3px;
+	background: #fff;
+	padding:30px;
+}
+
+/*---< pager >-----------------------------------------------------------------------------*/
+.pager{
+	padding:30px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+    .pager ul{
+        display: flex;        
+    }
+
+        .pager>div{
+            display: flex;
+        }
+
+        .pager ul li{
+            width:20px;
+            height: 20px;   
+            text-align: center;         
+        }
+
+		.pager ul li a.current{
+            font-weight: bold;
+            color:orange;
+        }
+		
+
+        .pager>div>div:first-child{
+            width: 20px;
+            height: 20px;
+            background: url(/images/btn-prev.png) no-repeat center;
+            text-indent: -999px;
+            overflow: hidden;
+        }
+
+        .pager>div>div:last-child{
+            width: 20px;
+            height: 20px;
+            background: url(/images/btn-next.png) no-repeat center;
+            text-indent: -999px;
+            overflow: hidden;
+        }
+
+/*---< search-form >-----------------------------------------------------------------------------*/
+.search-form{
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.search-form form{
+	
+}
+
+
+/* === < /book/list >===================================================== */
+.book-shelf{
+    --margin-top: 20px;
+}
+
+.book-shelf>header{    
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;   
+}
+
+.book-shelf>header>h1{
+    flex-grow: 1;
+    font-family: '筌띾쵐占� �⑥쥓逾�', '�⑥쥓逾�', sans-serif;
+    font-size: 1.5em;
+}
+
+.book-shelf .book-list{
+   
+    background: #fff;
+    padding:40px;
+    display: flex;    
+    flex-wrap: nowrap;
+    overflow: visible;
+}
+
+.book-shelf .book-list .book{    
+    position: relative;    
+    flex-shrink: 0;
+}
+.book-shelf .book-list .book>h1{    
+    font-family: 'Jua', '�⑥쥓逾�', cursive;
+    font-size: 20px;
+}
+
+.book-shelf .book-list .book .info{
+    display: grid;
+    grid-template-columns:150px 1fr;    
+    grid-column-gap: 20px;
+    --align-items: center;
+    
+    width:350px;
+    height: 200px;
+    flex-wrap: wrap;    
+    position: relative;        
+    margin-top: 10px; 
+    
+}
+
+
+.book-shelf .book-list .book .info .img{   
+   
+    grid-row : 1/5;
+    grid-column: 1;
+
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px #797979;    
+
+}
+
+.book-shelf .book-list .book .info .img img{
+    width: inherit;
+    height: inherit;
+    object-fit:cover;
+    
+}
+
+.book-shelf .book-list .book .info .writerId{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.book-shelf .book-list .book .info .aaa{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.book-shelf .book-list .book .info .button{
+    grid-column: 2;
+    grid-row: 3;
+    
+}
+
+
+/* ### <category/list >###################################################################### */
+.category-content .category-list li{
+	line-height: 1.5;
+    font-family: Noto Sans DemiLight,AppleSDGothicNeo-Regular,'Malgun Gothic','留묒� 怨좊뵓',dotum,'怨좊뵓',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    
+    display:flex;	
+    height: 52px;
+    line-height: 52px;
+    
+    margin-bottom: -1px;
+    border: 1px solid #E0E5EE;
+    --font-size: 16px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+
+.category-content .category-list li:before{
+	content:'';
+	display: block;
+	background: url("/images/icon/baseline-drag_indicator-24px.svg") no-repeat center;
+	border-left:10px solid #e9e9e9;
+	border-right:1px solid #e9e9e9;
+	width:40px;
+	height: 100%;
+	margin-right: 10px;
+}
+
+/* ### <book/detail >###################################################################### */
+.book-contents .contents-list>section{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 2px dotted #e9e9e9;
+}
+
+.book-contents .contents-list>section:hover{
+	--background: #f1f1e0;
+}
+
+.book-contents .contents-list header{
+	
+    font-family: Noto Sans DemiLight,AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'고딕',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    
+    display:flex;
+}
+
+.book-contents .contents-list header>h1{	
+	flex-grow: 1;
+}
+
+.book-contents .contents-list header>h1 .title
+{
+	font-family: 'Noto Sans KR', '援대┝', cursive;
+    font-size: 1.2em;
+	position:relative;
+	left:10px;
+}
+
+.book-contents .contents-list>section .note-list{
+	--background: #fff;
+}
+
+.book-contents .contents-list>section .note-list li{
+	box-sizing:border-box;
+	height:40px;
+	border:1px solid #e9e9e9;
+	padding:10px;
+	margin-top:5px;
+	background: #fff;
+	
+	display: flex;
+	align-items: center;
+}
+
+.book-contents .contents-list>section .note-list li .title{
+	flex-grow: 1;
+}
+
+
+.book-contents .contents-list>section .note-list li:hover{
+	background:#e9e9e9;
+}
+
+.book-contents .contents-list>section .note-list li .tool-bar{
+	display: none;
+}
+
+
+.book-contents .contents-list>section .note-list li:hover .tool-bar{
+	
+	display: initial;
+}
+
+
+

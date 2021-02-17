@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.notepubs.web.dao.LanguageDao">
+
+	<select id ="getList" resultType="com.notepubs.web.entity.Language">
+		select * from Language
+		order by id desc
+	</select>
+	
+	<select id ="getViewList" resultType="com.notepubs.web.entity.LanguageView">
+		select * from LanguageView
+		order by id desc
+	</select>
+	
+	<insert id="insert">
+		insert Language(name,memberId,categoryId)
+		values(#{param1},#{param2},#{param3})
+	</insert>
+	
+	<delete id="delete">
+		delete Language where id = #{id} 
+	</delete>
+
+</mapper>

@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+
+.tool-section{
+	border:1px solid #dee2e6;
+	padding: 20px;	
+}
+
+.tool-section label:first-child{
+	display:block;
+	margin-top: 0.6rem; 
+	font-weight: bold;
+}
+
+.tool-section select,
+.tool-section .input
+{
+	display:block;
+	margin-top: 0.6rem; 
+}
+
+@media screen and (min-width: 597px) {
+	.tool-section{
+		margin-left:20px;
+		margin-right:20px;
+	}
+	
+	.tool-list{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		
+	}
+	.tool-list>div{
+		width:45%;		
+	}
+	
+}
+
+@media screen and (min-width: 800px) {
+	
+	
+	.tool-section{
+		padding-left:20px;
+		padding-right:20px;
+	}
+	
+}
+@media screen and (min-width: 1000px) {
+	
+	/* main{
+		padding:20px 0px 50px 0px;
+		width:100%;
+	} */
+}
+
+
+/*--- note-section ----------------------------------------------------------------------*/
+.note-section .clipper{
+	padding: 10px 0px;
+}
+
+.note-section>h1{
+	font-size: 18px;
+    font-weight: bold;
+}
+
+.note-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+	.note{
+		font-family: "Noto Sans Medium", AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, 돋움, sans-serif;
+		margin-right:0px;
+		width:100%;
+		height:320px;	
+		border:1px solid #e9e9e9;	
+		
+		--note-padding:15px;			
+		padding:var(--note-padding);
+		
+		background:#fff;
+		box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);
+	    border-radius: 0.5rem;
+	    overflow: hidden;
+	    
+	    flex-shrink: 1;
+	    flex-grow:0;
+	    
+	    display: flex;
+	    flex-direction: column;
+	    
+	    position: relative;
+	    
+	    margin-bottom: 20px;
+	}
+	
+	.note>h1{
+		font-size:16px;
+		font-weight: bold;
+	}
+	
+	.note .note-content{
+		font-size:14px;
+		padding: 10px 5px;				
+		overflow: hidden;
+		
+		flex-grow: 1;
+	}
+	
+	.note div.info{
+		font-size:12px;
+		
+		border-top:1px solid gray;
+		height: 40px;
+		line-height: 40px;
+		
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.note div.cover{
+		position: absolute;				
+		left:0px;
+		top:100%;
+						
+		background: #0008;				
+		
+		width:100%;
+		height: 100%;
+		
+		transition: 500ms;
+		
+		box-sizing:border-box;
+		padding:30px 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+	
+	.note:hover div.cover{
+		top:0%;
+		
+	}
+	
+	.note div.cover>footer{
+		font-size: 12px;
+	}
+	
+		.note .show-button,
+		.note .edit-button,
+		.note .del-button
+		{
+			cursor:pointer;
+		}
+		
+		.note .show-button>a,
+		.note .edit-button>a,
+		.note .del-button>a
+		{
+			padding:7px;
+			font-weight: bold;
+			color:#000;
+			background: #fff;
+			opacity:0;
+			
+			transition: opacity 500ms;
+		}
+		
+		.note .show-button:hover>a,
+		.note .edit-button:hover>a,
+		.note .del-button:hover>a
+		{
+			opacity:1;
+		}
+					
+		.note .show-button{
+			width:70px;
+			height:70px;
+			
+			background: url("/images/icon/description-white-150px.png") no-repeat;
+			background-size: contain;
+		}
+		
+		.note .edit-button{
+			width:70px;
+			height:70px;
+			
+			background: url("/images/icon/edit-white-24px.png") no-repeat;
+			background-size: contain;
+		}
+		
+		.note .del-button{
+			width:70px;
+			height:70px;
+								
+			background: url("/images/icon/delete_forever-white-24px.png") no-repeat;
+			background-size: contain;
+		}
+@media screen and (min-width: 596px) {
+	.note{
+		margin-right:20px;
+		width:45%;
+	}	
+}
+
+@media screen and (min-width: 906px) {
+	
+	.note{		
+		width:250px;
+	}
+}
+@media screen and (min-width: 1000px) {
+	
+}
+
+/* ---<note-writing>---------------------------------------------------------- */
+
+.recent-note > div{
+    background: #fff;    
+    margin-top: 10px;
+    padding:20px;
+    display: grid;    
+    grid-template-columns: repeat(4, 1fr);  
+}
+
+.recent-note >div > section{
+    width: 200px;
+    height: 250px;
+    margin: 6px;
+    border: 1px solid #E0E5EE;
+    background: #fff;    
+    grid-gap: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.recent-note >div > section>h1{
+	padding:10px;
+	font-size: 1.2em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.recent-note >div > section>div{
+	padding:10px;
+}
+
+.recent-note >div > section dl{
+	display: flex;
+	align-items:center;
+	justify-content:space-around;
+	position: absolute;
+	bottom: 0px;
+	background: #fff;
+	width: 100%;
+	height: 30px;
+	border-top: 1px solid #e9e9e9;
+}
+
+/* ---<list-note>---------------------------------------------------------- */
+
+.mng-tool{
+	background: #fff;
+	padding:30px;
+}
+
+.mng-tool>div{
+	display: flex;
+	align-items: center;	
+}
+
+.mng-tool>div>label{
+	margin-left:20px;
+}
+
+.mng-tool>div>label:first-child{
+	margin-left:0px;
+}
+
+.mng-tool>div>select{
+	margin-left:5px;
+}
+/* ---<list-note>---------------------------------------------------------- */
+.list-note{
+	margin-top:3px;
+	background: #fff;
+	padding:30px;
+}

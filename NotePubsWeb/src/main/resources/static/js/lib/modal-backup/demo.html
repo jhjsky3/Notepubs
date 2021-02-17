@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="modal.js"></script>
+<script>
+window.addEventListener("load", function(){
+    
+    var button = document.querySelector("input[type=button]");
+    
+    button.onclick = function(){
+    	
+    	/* var modal = new Modal("aaa","hello", "ok");        
+        modal.show(); */
+        
+        
+        new Modal("input:textarea")
+        .addEventListener("ok", function(data){
+        	new Modal(data,"확인").show();
+        })
+        .show();
+    };
+
+});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+<input type="button" value="click"><br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+		a<br >
+</body>
+</html>

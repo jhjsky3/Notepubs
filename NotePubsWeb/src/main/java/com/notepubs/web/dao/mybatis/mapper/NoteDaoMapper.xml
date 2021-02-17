@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.notepubs.web.dao.NoteDao">
+
+	<select id="getList" resultType="com.notepubs.web.entity.Note">
+		select * from Note
+		<where>
+			<if test="param1 != null and param1 != ''">
+				title Like '%${param1}%'
+			</if>
+			<if test="param2 != 0">
+				and myCategoryId = ${param2}
+			</if>
+			<if test="param3 != 0">
+				and categoryId = ${param3}
+			</if>
+			<if test="param4 != 0">
+				and languageId = ${param4}
+			</if>
+			<if test="param5 != 0">
+				and platformId = ${param5}
+			</if>
+		</where>
+		order by regDate desc
+	</select>
+	
+	
+	
+
+	<!-- <select id ="getList" resultType="com.notepubs.web.entity.Note"> select 
+		* from Note <if test="param1 != null"> where title Like '%${param1}%' </if> 
+		</select> -->
+
+	<select id="getHitTopViewList"
+		resultType="com.notepubs.web.entity.NoteView">
+		select * from NoteView
+		where pub = 1
+		order by hit desc
+		offset 0
+		rows
+		fetch next 10 rows only
+	</select>
+
+	<select id="getNewViewList"
+		resultType="com.notepubs.web.entity.NoteView">
+		select * from NoteView
+		where pub = 1
+		order by regDate desc
+		offset
+		0 rows
+		fetch next 10 rows only
+	</select>
+
+
+	<select id="get" resultType="com.notepubs.web.entity.Note">
+		select * from Note where
+		id=#{id}
+	</select>
+	
+	<select id="getView" resultType="com.notepubs.web.entity.NoteView">
+		select * from NoteView where
+		id=#{id}
+	</select>
+
+	<insert id ="insert" parameterType="com.notepubs.web.entity.Note">
+		insert into Note(memberId,title,content)
+		values(#{memberId}, #{title}, #{content})
+	</insert>
+
+
+
+	<update id="update" parameterType="com.notepubs.web.entity.Note">
+		UPDATE Note set
+		[title] = #{title},
+		[content] = #{content},
+		[regDate] = #{regDate},
+		[hit] = #{hit},
+		[order] = #{order},
+		[pub] = #{pub},
+		[mycategoryId] = #{mycategoryId},
+		[memberId] = #{memberId} ,
+		[platformId] = #{platformId},
+		[languageId] = #{languageId},
+		[categoryId] = #{categoryId}
+		where id=#{id}
+	</update>
+
+	<delete id="delete">
+		delete from Note
+		where id = #{id}
+	</delete>
+
+	<select id="getViewList"
+		resultType="com.notepubs.web.entity.NoteView">
+		select * from NoteView
+		where pub=1
+		order by regDate desc
+	</select>
+	
+	<select id="getPubViewList"
+		resultType="com.notepubs.web.entity.NoteView">
+		select * from NoteView
+		<where>
+			<if test="param1 != null and param1 != ''">
+				title Like '%${param1}%'
+			</if>
+			<if test="param2 != 0">
+				and myCategoryId = ${param2}
+			</if>
+			<if test="param3 != 0">
+				and categoryId = ${param3}
+			</if>
+			<if test="param4 != 0">
+				and languageId = ${param4}
+			</if>
+			<if test="param5 != 0">
+				and platformId = ${param5}
+			</if>
+			and pub=1
+			
+		</where>
+		order by regDate desc
+		offset #{param6} rows
+       fetch next #{param7} rows only
+	
+		
+	</select>
+	<select id="getPrev"
+		resultType="com.notepubs.web.entity.Note">
+		select top 1 * from NoteView
+		where regDate &lt; (select regDate from Note where id=#{id})
+		order by regDate desc		
+	</select>
+	
+	<select id="getNext"
+		resultType="com.notepubs.web.entity.Note">
+		select top 1 * from NoteView
+		where regDate &gt; (select regDate from Note where id=#{id})
+		order by regDate 
+		
+	</select>
+	
+	
+	<select id="getPub" resultType="int">
+		select pub from note where id = #{id}
+	</select>
+	
+
+	<select id="getViewListByWriterId" resultType="com.notepubs.web.entity.NoteView">
+		select * from NoteView
+		where writerId = #{param1}
+		order by regDate desc
+	</select>
+	
+	<update id="pubAll">
+		update Note set pub=1 where id in 
+		<foreach item="item" index="index" collection="ids"
+	      open="(" separator="," close=")">
+	        #{item}
+	  	</foreach>
+	</update>
+	
+</mapper>
+

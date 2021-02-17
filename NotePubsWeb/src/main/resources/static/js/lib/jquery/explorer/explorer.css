@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+body{
+	margin:0px;
+}
+
+.hidden{
+	display: none;
+}
+
+.explorer{
+	background: beige;
+	height: 100%;
+}
+
+	.explorer .toolbar{
+		height: 34px;
+		background: #f4f4f4;		
+		display: flex;
+		padding: 5px;
+		border-bottom: 1px solid #c9c9c9;
+	}
+	
+		.explorer .toolbar>input{
+			width:24px;
+			height: 24px;
+			border: none;
+			text-indent: -999px;
+			padding:0px;
+			background-repeat:no-repeat;
+			background-color: #f4f4f4;
+			cursor: pointer;
+			margin:5px;
+		}
+		
+		.explorer .toolbar>input:hover{
+			background-color: #c4c4c4;	
+		}
+	
+		.explorer .toolbar>input[value="find"]{
+			background-image: url("images/explorer-icon-set.png");
+			background-position: 0px -48px;			
+		}
+		
+		.explorer .toolbar>input[value="add"]{
+			background-image: url("images/explorer-icon-set.png");
+			background-position: -24px -48px;			
+		}
+		
+		.explorer .toolbar>input[value="upload"]{
+			background-image: url("images/explorer-icon-set.png");
+			background-position: -48px -48px;			
+		}
+		
+	.explorer table{
+		width: 100%;	
+		font-size: 14px;
+		text-align: center;
+	    color: #333333;
+	    display: inline;
+	    max-width: 100%;
+		
+	}
+	
+	.explorer thead{
+		font-size: 12px;
+		height: 32px;
+		line-height: 32px;
+	}
+	
+	.explorer tbody{
+		height: 25px;
+		
+	}
+		

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width,initial-scale=1, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Insert title here</title>
+<link href="/css/member/index.css" type="text/css" rel="stylesheet" >
+</head>
+<body>
+	<style>
+		.member.aside.show{
+			left:0px;
+		}
+	</style>
+	<header id="header">
+		<ul>
+			<li id="ham-button"><a href="" class="icon hamburger-icon">펼치기</a></li>
+		</ul>
+		<h1 class=""><a href="/index"><img src="/images/logo/logo-ldpi.png" alt="notepubs" /></a></h1>
+		
+		<nav id="main-menu">
+			<h1>메인메뉴</h1>
+			<ul>
+			
+				<li><a href="/user/logout">로그아웃</a></li>
+			
+						
+			<!-- <li><a href="/member/join1" class="icon elipsis-icon">회원가입</a></li> -->
+			</ul>
+		</nav>
+        <!-- <%-- <h1 class="logo"><a href="/index"><img src="/images/logo/logo-ldpi.png" alt="notepubs" ></a></h1>
+        
+        <section class="d-inline-block header-notice">
+            <h1 class="d-none">공지사항</h1>
+            <div>
+                <a class="c-symbol c-speaker-symbol" href="">[공지]서비스를 업데이트 할 예정입니다.</a>
+            </div>
+        </section>
+        <nav class="d-inline-block quick-menu">
+            <h1 class="d-none">간편메뉴</h1>
+            <ul class="d-flex">
+                <li><a class="c-button c-write-button" href="/member/note/reg">글쓰기</a></li>
+                <li><a class="icon icon-alarm" href="">알림</a></li>
+                <li><a class="img profile-sm-img" href="">숨김</a></li>
+            </ul>
+        </nav> --%> -->
+    </header>
+	<script>
+		var CSS = {};
+		CSS.set = function(element, attrs){
+			for(var key in attrs)
+				element.style[key] = attrs[key];
+		}
+		
+		window.addEventListener("load", function(event){
+			
+			// hamburger 버튼을 누를 때의 행위
+			var hamButton = document.querySelector("#ham-button");
+			
+			var aside = document.querySelector(".member.aside");
+			
+			hamButton.onclick = function(e){
+				e.preventDefault();
+				
+				// aside 창을 펼치는 행위
+				if(aside.classList.contains("show")){
+					aside.nextElementSibling.remove();
+					aside.classList.remove("show");
+				}
+				else{
+					var screen = document.createElement("div")
+					CSS.set(screen, {
+						position: "fixed",
+						width: "100%",
+						height: "100%",
+						background: "#000",
+						opacity: "0.5",
+						zIndex: "500"
+					});
+					
+					screen.onclick = function(e){
+						aside.classList.remove("show");
+						e.target.remove();
+					};
+					
+					aside.insertAdjacentElement('afterend', screen);
+				
+					aside.classList.add("show");
+				}
+			};
+			
+		});
+	</script>
+	
+	<div class="body">
+
+			<!-- --- aside --------------------------------------------------------- -->
+	        <aside class="aside member">
+	            <h1 class="d-none">관리정보</h1>
+	            <section class="profile">
+	                <h1 class="d-none">프로필</h1>
+	                <div>
+	                    <div class="photo"><img src=""></div>
+	                    <div class="info">
+		                    
+							<span>newlec</span>						                        
+	                        <a class="url" href="">http://www.notepubs.com/newlec</a>
+	                    </div>
+	                </div>
+	            </section>
+	            <nav class="fav-menu type2">
+	                <h1 class="d-none">자주사용하는메뉴</h1>                
+	                <ul>
+	                <!-- <sec:authorize access="hasRole('ADMIN')"> -->
+	                    <li><a href="/admin/index">관리자 페이지</a></li>
+	                <!-- </sec:authorize> -->                                        
+	                </ul>
+	            </nav>
+	            <nav class="fav-menu">
+	                <h1 class="d-none">자주사용하는메뉴</h1>
+	                <ul>
+	                    <!-- <sec:authorize access="hasRole('WRITER')"> -->
+		                    <li><a href="/member/note/reg">글쓰기</a></li>
+	                    	<li><a href="">책만들기</a></li>
+						<!-- </sec:authorize> -->
+						<!-- <sec:authorize access="!hasRole('WRITER')"> -->
+	                    	<li><a href="javascript:alert('준비중입니다.');">집필자되기</a></li>
+	                    <!-- </sec:authorize> -->
+	                </ul>
+	            </nav>
+	            <nav class="content-menu aside-menu">
+	                <h1 class="c-symbol c-note-symbol">콘텐츠관리</h1>
+	                <ul>
+	                <sec:authorize access="hasRole('WRITER')">
+	                    <li class=""><a href="/member/note/list">노트관리</a></li>
+	                    <li><a href="/member/book/list">북관리</a></li>
+	                </sec:authorize>
+	                    <li class=""><a href="/member/memo/list">메모관리</a></li>
+	                    <li><a href="/member/category/list">카테고리</a></li>
+	                </ul>
+	            </nav>
+	            <nav class="community-menu aside-menu">
+	                <h1 class="c-symbol c-comment-symbol">커뮤니티</h1>
+	                <ul>
+	                    <li><a href="">댓글</a></li>
+	                    <li><a href="" class="">북관리</a></li>
+	                    <li><a href="">좋아요</a></li>
+	                    <!-- <li><a href="">북관리</a></li> -->
+	                </ul>
+	            </nav>
+	        </aside>
+	        
+	        <!-- --- main ------------------------------------------------------------- -->
+	        
+			        <main class="main">
+            <section class="count-board">
+                <h1 class="d-none">집계보드</h1>                
+                <dl>
+                    <dt>오늘 조회수</dt>
+                    <dd>12</dd>
+                    <dt>어제 조회수</dt>
+                    <dd>24</dd>
+                    <dt>28일 조회수</dt>
+                    <dd>3212</dd>
+                </dl>
+            </section>
+            <section class="books-writing content-section">                
+                <header>
+                    <h1>집필중인 서적</h1>
+                    
+                </header>
+                <div class="book-list">
+                    <!-- <c:forEach var="i" begin="1" end="2"> -->
+						<!-- <c:set var="isCurrent" value="${param.id==Integer.parseInt(i)}" /> -->					
+						<section class="book ${isCurrent?'current':''}">
+							<h1><a href="book/detail?id=1">편하게 읽는 자바 프로그래밍</a></h1>
+							<div>
+								<div class="img">
+									<a href="book/detail?id=1"><img src="../../images/book/cover-java.png"></a>
+								</div>
+								<div class="detail">
+									<dl class="info">
+										<dt class="note">노트 :</dt>
+										<dd>321개</dd>
+										<dt class="note">챕터 :</dt>
+										<dd>6개</dd>
+										<dt class="note">수정일 :</dt>
+										<dd>2020-05-12</dd>
+									</dl>
+									<div>
+										<a href="" class="c-btn c-btn-default">통계</a>
+									</div>
+								</div>
+								<div class="analize d-none">
+									<span class="note">320 조회수</span> <span class="chapter">6
+										구독자</span> <span class="a">aaa</span> <span class="button c-symbol">버튼</span>
+								</div>
+							</div>
+						</section>
+					<!-- </c:forEach> -->
+                </div>
+            </section>
+            
+            <section class="recent-note content-section">                
+                <header>
+                    <h1>최근 노트</h1>
+                    
+                </header>        
+                <div>
+                
+                    <section>
+                    	<h1><a href="/note/1" target="_blank">제목</a></h1>
+                    	<div>                    		
+                    		<p>글 내용</p>
+                    	</div>
+                    	<dl>
+                    		<dt>조회</dt>
+                    		<dd>12</dd>
+                    		<dt>댓글</dt>
+                    		<dd>0</dd>
+                    		<dt>좋아요</dt>
+                    		</dd>0</dd>
+                    	</dl>
+                    </section>
+                	<!-- ------------------------------------------------------- -->
+                	<section>
+                    	<h1><a href="/note/1" target="_blank">제목</a></h1>
+                    	<div>                    		
+                    		<p>글 내용</p>
+                    	</div>
+                    	<dl>
+                    		<dt>조회</dt>
+                    		<dd>12</dd>
+                    		<dt>댓글</dt>
+                    		<dd>0</dd>
+                    		<dt>좋아요</dt>
+                    		</dd>0</dd>
+                    	</dl>
+                    </section>
+                	<!-- ------------------------------------------------------- -->
+                	<section>
+                    	<h1><a href="/note/1" target="_blank">제목</a></h1>
+                    	<div>                    		
+                    		<p>글 내용</p>
+                    	</div>
+                    	<dl>
+                    		<dt>조회</dt>
+                    		<dd>12</dd>
+                    		<dt>댓글</dt>
+                    		<dd>0</dd>
+                    		<dt>좋아요</dt>
+                    		</dd>0</dd>
+                    	</dl>
+                    </section>
+                	<!-- ------------------------------------------------------- -->
+                	
+                </div>
+            </section>
+        </main>
+	
+    </div>
+	<!-- --- footer ------------------------------------------------------------- -->
+    <footer>
+        <section>
+            <h1>노트펍스 정보</h1>
+            <div>
+                저작권 : 
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

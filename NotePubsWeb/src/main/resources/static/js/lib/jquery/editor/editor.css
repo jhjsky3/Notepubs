@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.com-notepubs-hidden{
+	display: none;	
+}
+
+.com-notepubs-editor{
+	width:100%;
+	height: 100%;
+	
+}
+
+.com-notepubs-editor-toolbar{
+	
+}
+
+.com-notepubs-editor-panel-iframe{
+	width:100%;
+	background: beige;
+	border: none;
+}

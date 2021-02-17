@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+
+
+
+/*--- overflow ------------------------------------------------------------------*/
+
+.overflow-y-auto{ overflow-y: auto!important; }
+.overflow-auto { overflow: auto!important; }
+.overflow-hidden { overflow: hidden!important; }
+
+
+
+
+
+
+/* --- Viewport additional helpers --------------------- */
+
+.min-vw-100 { min-width: 100vw !important; }
+.min-vh-100 { min-height: 100vh !important; }
+
+.vw-100 { width: 100vw !important; }
+.vh-100 { height: 100vh !important; }
+
+.border-box{
+    box-sizing: border-box;
+}
+
+.content-box{
+    box-sizing: content-box;
+}
+
+.shadow-sm { box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; }
+.shadow { box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; }
+.shadow-lg { box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important; }
+.shadow-none { box-shadow: none!important; }
+
+/* --- position --------------------- */
+
+.position-static{ position: static !important; }
+.position-relative{ position: relative !important; }
+.position-absolute{ position: absolute !important; }
+.position-fixed{ position: fixed !important; }
+.position-sticky{ position: sticky !important; }
+
+.fixed-left{ left: 0; }
+.fixed-top{ top: 0; }
+.fixed-bottom{ bottom: 0; }
+.fixed-right{ right: 0; }
+
+/* --- cursor --------------------- */
+.cursor-pointer{
+  cursor: pointer;
+}
+
+/* --- cursor --------------------- */
+.zIndex-1{
+  z-index: 1 !important;
+}
+
+.zIndex-2{
+  z-index: 2 !important;
+}
+
+.zIndex-dropdwon{
+  z-index: 1000 !important;
+}
+
+.zIndex-sticky{
+  z-index: 1020 !important;
+}
+
+.zIndex-fixed{
+  z-index: 1030 !important;
+}
+
+.zIndex-modal-backdrop{
+  z-index: 1040 !important;
+}
+
+.zIndex-modal{
+  z-index: 1050 !important;
+}
+
+.zIndex-popover{
+  z-index: 1060 !important;
+}
+
+.zIndex-tooltip{
+  z-index: 1070 !important;
+}
+
+/*--- visible ------------------------------------------------------------------*/
+.visible {
+  visibility: visible !important;
+}
+.invisible {
+  visibility: hidden !important;
+}
+
+/*--- transition ------------------------------------------------------------------*/
+
+.transition{
+  transition:500ms!important;
+}
+
+.transition-height{
+  transition:height 500ms!important;
+}
+
