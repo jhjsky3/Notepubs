@@ -1,81 +1,62 @@
-# notepubs
+# Notepubs
+## 프로젝트 소개
 
-## 목차
+- 누구나 쉽고 편하게 책을 출판할 수 있는 있도록 도와주는 온라인 출판 서비스입니다
 
-### 1. 들어가며
+&nbsp;
+___
 
-#### 📑 소개
+&nbsp;
 
-![image](https://user-images.githubusercontent.com/72859156/108106095-d987db80-70d0-11eb-95d1-f0d1c62c2dad.png)
-누구나 원하는 책을 쓸수있게 해주는 사이트입니다
--본 프로젝트는 풀스택 개발과정 수업의 복습을 위해 Spring boot 기반으로 작성되었습니다.-
+## 📆 기간
 
-#### 📆 기간 
+- 2021.01.10 ~ 2021.02.16 (1M)
 
- - 2021.01.11 ~ 2021.02.15 (1M)
+&nbsp;
+___
 
-#### 🛠 사용 기술 
+## ⚙ 개발환경
+&nbsp;
 
- - fetch API
+프론트앤드
+- <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
+- <img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=flat-square&logo=css3&logoColor=white"/>
+- <img src="https://img.shields.io/badge/Vanila JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
 
-#### ⚙ 개발환경
 
- 1️⃣ 기획, 설계, 일정관리
+백앤드
+- <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white"/>
+- <img src="https://img.shields.io/badge/spring%20-%236DB33F.svg?&style=flat-square&logo=spring&logoColor=white"/>
 
-  - ER-win
+Database
+- <img src="https://img.shields.io/badge/MS SQL-CC2927?style=flat-square&logo=MicrosoftSQLServer&logoColor=white"/>
 
- 2️⃣ Front-end
+협업
+- <img alt="GitHub" src="https://img.shields.io/badge/github%20-%23121011.svg?&style=flat-square&logo=github&logoColor=white"/>
 
-  - HTML/CSS, Java Script
+&nbsp;
+___
+&nbsp;
+## 💻 주요기능
 
- 3️⃣ Back-end
+✅ 로그인 페이지
+&nbsp;
+![login](https://user-images.githubusercontent.com/69382020/115178108-8bf91080-a10b-11eb-991e-f6ee5ef041e0.PNG)
 
-  - Java, Spring Boot, Maven, MyBatis
+✅ 비회원 노트 관리 페이지
+&nbsp;
+![비회원노트](https://user-images.githubusercontent.com/69382020/115178217-cbbff800-a10b-11eb-954d-e9c2fb056a3c.PNG)
 
- 4️⃣ DBMS
 
-  - MsSQL
+✅ 회원 목록 페이지
+&nbsp;
+![관리자회원관리](https://user-images.githubusercontent.com/69382020/115178202-c2369000-a10b-11eb-90be-78487ad1fa3e.PNG)
 
- 5️⃣ IDE
 
-  - Spring Boot suite, VsCode
+회원 노트 관리
+&nbsp;
+![회원노트관리](https://user-images.githubusercontent.com/69382020/115178226-cf537f00-a10b-11eb-8395-0318ab555bb2.PNG)
 
- 6️⃣ 형상 관리 툴
+&nbsp;
 
-  - Git
-
-#### 🎞💻 주요기능
-
-✅ 회원 노트 관리
-![image](https://user-images.githubusercontent.com/72859156/108106396-3be0dc00-70d1-11eb-989a-53be259892ec.png)
-
-✅ 비회원 노트 관리
-![image](https://user-images.githubusercontent.com/72859156/108107786-0c32d380-70d3-11eb-8703-c9d0908da2c8.png)
-
-✅ 회원 목록
-![image](https://user-images.githubusercontent.com/72859156/108106566-78143c80-70d1-11eb-82fa-d218e9403946.png)
-
-✅ 카테고리 언어
-![image](https://user-images.githubusercontent.com/72859156/108107328-6f703600-70d2-11eb-8ffc-c697194abbd6.png)
-
-✅ 로그인 화면
-![image](https://user-images.githubusercontent.com/72859156/108109078-caa32800-70d4-11eb-8856-b52b8cd524fd.png)
-
-#### 👨‍🦲 맡은 역할 및 기능
-
-- 김승현
-
-- 이연준
-    - 카테고리의 언어와 플랫폼 담당
-- 정진우
-    - 노트 목록(비회원)
-- 허민강
-    - 로그인 회원가입
-- 전홍준(팀장)
-    - 노트 목록 (회원)
-- 이지선
-    - 회원 목록
-#### 2. 개발후기
-1차 프로젝트 떄는 스프링부트를 사용하지않고 만들었다가 스프링 부트를 사용해서 만들었을 때 예전처럼 복잡한 코드를 만들지 않을 수 있어서 똑같은 시간을 들여서 더 좋은 결과물을 만들어 낼 수 있다는 걸 알았다 생각했던 것보다 더 좋게 만들지 못했지만 처음 프로그래밍을 시작했을 때만 해도 스스로 이런 사이트를 만들 수 있을 거라고는 생각도 못 했고 조금씩이지만 계속해서 배우고
-만들어나가고 기능을 추가할 때 오류를 만나면 오류를 찾아내서 고치고 기능을 추가했을 때 나 자신이 조금씩이지만 계속해서 성장해 간다는 걸 느낄 수 있어서 좋았던 거 같다
-
+![회원노트설명](https://user-images.githubusercontent.com/69382020/115178247-da0e1400-a10b-11eb-9264-64cf6678e729.PNG)
